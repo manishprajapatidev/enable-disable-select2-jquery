@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Enable/Disable Select2 jQuery</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $(".select-box").select2();
+
+        $("#disable-btn").on("click", () => {
+          $(".select-box").prop("disabled", true);
+        });
+
+        $("#enable-btn").on("click", () => {
+          $(".select-box").prop("disabled", false);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select class="select-box" style="width:50%">
+      <option value="CT">Connecticut</option>
+      <option value="DE">Delaware</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+      <option value="IN">Indiana</option>
+      <option value="ME">Maine</option>
+      <option value="MD">Maryland</option>
+      <option value="MA">Massachusetts</option>
+      <option value="MI">Michigan</option>
+      <option value="NH">New Hampshire</option>
+      <option value="NJ">New Jersey</option>
+      <option value="NY">New York</option>
+      <option value="NC">North Carolina</option>
+      <option value="OH">Ohio</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="RI">Rhode Island</option>
+      <option value="SC">South Carolina</option>
+      <option value="VT">Vermont</option>
+      <option value="VA">Virginia</option>
+      <option value="WV">West Virginia</option>
+    </select>
+    <button type="button" id="enable-btn">
+      Enable
+    </button>
+    <button type="button" id="disable-btn">
+      Disable
+    </button>
+  </body>
+</html>
