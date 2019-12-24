@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "serve",
-    "build": "npm run build --output public"
+    "start": "serve"
   },
   "repository": {
     "type": "git",
